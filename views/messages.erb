@@ -6,6 +6,11 @@
   <body>
     <div>
 
+      <ul>
+        <% @messages.each do |message| %>
+        <li><%= message.content %> (From: <%= message.sender %>; To: <%= message.receiver %>)</li>
+        <% end %>
+      </ul>
     </div>
     <a href="/reset"><b>DELETE ALL MESSAGES</b></a>
   </body>
